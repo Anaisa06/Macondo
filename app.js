@@ -54,7 +54,7 @@ while (vacation){
     const largoMaleta = 40;
     const altoPermitido = 55;
     const anchoPermitido = 20;
-    const largoPermitido = 55;
+    const largoPermitido = 40;
 
     alert("Bien, ahora Hildebrando está a punto de abordar el avión, pero... La maleta que lleva no cumple con el tamaño máximo permitido, al parecer es 5 cm más alta. La mejor opción para Hildebrando es deshacerse de un par de prendas de la maleta para que cumpla con las características, así que vamos a calcular el factor de reducción mínimo para que pueda seguir con su viaje")
 
@@ -83,7 +83,7 @@ while (vacation){
 
     const password = "01110010_01101001_01110111_01101001"
 
-    alert("Ahora Hildebrando está en la ciudad de Medellín, son las 2 am y debe abordar el siguiente avión a las 3 am con dirección a Macondo. Necesita asegurar su reserva para el día siguiente, pero la única red de wifi que encontró se llama 'ElPassEs: 01110010_01101001_01110111_01101001'. Al parecer la contraseña está cifrada en código binario, pero no pasa nada porque Hildebrando tiene un az bajo la manga: un programa que le ayudará a convertir este código a decimales, y luego a caracteres")
+    alert("Ahora Hildebrando está en la ciudad de Medellín, son las 2 am y debe abordar el siguiente avión a las 3 am con dirección a Macondo. Necesita asegurar su reserva para el día siguiente, pero la única red de wifi que encontró se llama 'ElPassEs: 01110010_01101001_01110111_01101001'. Al parecer la contraseña está cifrada en código binario, pero no pasa nada porque Hildebrando tiene un as bajo la manga: un programa que le ayudará a convertir este código a decimales, y luego a caracteres")
 
     //Primero, separar el string en 8 bits
     const bytesList = password.split("_")
@@ -107,6 +107,26 @@ while (vacation){
     const realPassword = charList.join('')
     alert(`¡El programa ha funcionado de maravilla! Tenemos la contraseña del wifi: ${realPassword}. Ahora Hidelbrando podrá asegurar la reserva de su hotel en Macondo`)
     console.log(`Contraseña: ${realPassword}`)
+
+    //Caso 4: Problemas de lenguaje
+    const mensaje = "Taxi, me puede llevar la hotel mariposas amarillas, por favor"
+
+    //Definir expresión regular para encontrar las vocales
+    const regEx = /[aeiouAEOIU]/g
+
+    //Pedir un texto para probar el traductor
+    const userText = prompt("¡Hildebrando ha llegado a Macondo! Pero hay un problema, aquí solo hablan con la vocal i. No hay problema, Hildebrando tiene todo controlado y tiene un programa para traducir el texto. Ingresa un saludo para Macondo y verás como se traduce")
+
+    //Reemplazar las vocales por la letra i y mostrar resultado
+    const userTextTrad = userText.replace(regEx, "i")
+    console.log(`La traducción de tu texto "${userText}" es "${userTextTrad}"`)
+    alert(`La traducción de tu texto "${userText}" es "${userTextTrad}"`)
+
+    //Pedir taxi
+    alert(`Muy bien, ahora que sabemos que el traductor funciona, Hildebrando debe pedir un taxi para llegar al hotel. Vamos a traducir el mensaje "${mensaje}" para que se la pueda decir al conductor`)
+    const mensajeTrad = mensaje.replace(regEx, "i")
+    console.log(`La traducción de tu mensaje "${mensaje}" es "${mensajeTrad}"`)
+    alert(`La traducción de tu mensaje "${mensaje}" es "${mensajeTrad}"`)
 
     //Terminar programa
     alert("Vacaciones finalizadas")
