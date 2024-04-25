@@ -227,6 +227,7 @@ while (contadorDias < 4 && vacation === true){
                         alert("No es una opción válida, intenta de nuevo")    
                 }                                      
             }
+            break
         //Si escoge vestir azul
         case "4":
             flag = true
@@ -262,7 +263,9 @@ while (contadorDias < 4 && vacation === true){
                         alert("No es una opción válida, intenta de nuevo")
                 }
             }
-    }        
+            break
+    }    
+
 }
 
 //Terminar programa
