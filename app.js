@@ -1,6 +1,5 @@
 //Viaje de Hildebrando a Macondo
 
-
 //Funciones
 import { conversorBinario, macondoTraductor, validarJugada } from "./functions.js";
 
