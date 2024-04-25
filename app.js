@@ -128,6 +128,36 @@ while (vacation){
     console.log(`La traducción de tu mensaje "${mensaje}" es "${mensajeTrad}"`)
     alert(`La traducción de tu mensaje "${mensaje}" es "${mensajeTrad}"`)
 
+    //Caso 5: piedra, papel o tijera
+    const taxiFare = 300000
+    flag = true
+    const jugadas = ["piedra", "papel", "tijera"]
+
+    while (flag){
+        let userPlay = prompt("Hildebrando ha llegado al hotel Mariposas Amarillas, pero se lleva una gran sorpresa porque el taxista le dice que su cobro son $300.000. Él piensa que es demasiado, así que trata de negociar con el taxista; llegan al acuerdo de que si Hildebrando le gana en una ronda de piedra, papel, o tijera, no deberá pagar nada. ¿Que crees que debería sacar para ganarle al taxista?\n1. Piedra\n2. Papel\n 3. Tijera")
+
+        switch (userPlay){
+            case "1": 
+                userPlay = "piedra";
+                flag = false;
+                break;
+
+            case "2":
+                userPlay = "papel";
+                flag = false;
+                break;
+
+            case "3":
+                userPlay = "tijera";
+                flag = false;
+                break;
+                
+            default:
+                alert("Esa no es una jugada válida, intenta de nuevo")               
+
+        }
+    }
+
     //Terminar programa
     alert("Vacaciones finalizadas")
     vacation = false;
