@@ -33,8 +33,7 @@ function macondoTraductor (string){
 
 function validarJugada (jugada){
     let flag = true
-    while (flag){    
-               
+    while (flag){     
         switch (jugada){
             case "1": 
                 jugada = "piedra";

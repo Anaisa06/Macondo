@@ -21,7 +21,7 @@ while (flag){
 
         //Si escoge comer almojábana
         case "1":
-            alert("Uy! Esa almojábana llevaba días en el mostrador, es posible que a Hildebrando de le dolor de panza");
+            alert("Uy! Esa almojábana llevaba días en el mostrador, es posible que a Hildebrando le de dolor de panza");
 
             //Restar del sueldo
             restante = sueldo - almojabana;
@@ -134,7 +134,7 @@ alert(`La jugada de Hildebrando fue ${jugadaUser} y la jugada del taxista fue ${
 //Verificar si Hildebrando gana o pierde
 if (jugadaTaxi === jugadaUser){
     alert(`Bueno, no era lo que esperaba, pero Hildebrando ha empatado y ha logrado huir del taxista. Sigue con un dinero disponible de ${restante}`)
-} else if ((((jugadaUser === "piedra") && (jugadaTaxi === "papel"))) || (((jugadaUser === "papel") && (jugadaTaxi === "piedra"))) || (((jugadaUser === "tijera") && (jugadaTaxi === "papel")))){
+} else if ((((jugadaUser === "piedra") && (jugadaTaxi === "tijera"))) || (((jugadaUser === "papel") && (jugadaTaxi === "piedra"))) || (((jugadaUser === "tijera") && (jugadaTaxi === "papel")))){
     alert(`Bien! Has ayudado a Hildebrando a ganar, eso significa que no tendrá que pagar el taxi. Sigue con un dinero disponible de $${restante}`)
 } else {
     restante = restante - taxiFare
@@ -266,7 +266,6 @@ while (contadorDias < 4 && vacation === true){
             }
             break
     }    
-
 }
 
 //Terminar programa
