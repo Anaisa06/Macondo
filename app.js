@@ -135,7 +135,7 @@ alert(`La jugada de Hildebrando fue ${jugadaUser} y la jugada del taxista fue ${
 if (jugadaTaxi === jugadaUser){
     alert(`Bueno, no era lo que esperaba, pero Hildebrando ha empatado y ha logrado huir del taxista. Sigue con un dinero disponible de ${restante}`)
 } else if ((((jugadaUser === "piedra") && (jugadaTaxi === "papel"))) || (((jugadaUser === "papel") && (jugadaTaxi === "piedra"))) || (((jugadaUser === "tijera") && (jugadaTaxi === "papel")))){
-    alert(`Bien! Has ayudado a Hildebrando a ganar, eso significa que no tendrá que pagar el taxi. Sigue con un dinero disponible de ${restante}`)
+    alert(`Bien! Has ayudado a Hildebrando a ganar, eso significa que no tendrá que pagar el taxi. Sigue con un dinero disponible de $${restante}`)
 } else {
     restante = restante - taxiFare
     alert(`Oh no! Has hecho que Hildebrando pierda, esto va a salir caro. Tiene que pagarle $300.000 al taxi, su nuevo dinero disponible es de $${restante}`)
@@ -155,16 +155,14 @@ while (contadorDias < 4 && vacation === true){
 
     switch(colorSelec){
         //Si escoge vestir de amarillo
-        case "1":
-            colorSelec = "amarillo"               
-            
+        case "1":                         
             contadorDias++
             let piscina = confirm("Has escogido el color amarillo! Eso significa que Hildebrando irá a la piscina. Pero espera... la piscina huele un poco raro. Debería Hildebrando entrar a la piscina? Presiona 'ok' para que entre y 'cancel' para evitarlo")
 
             //Si decide entrar a la piscina
             if (piscina){
                 alert("Ay... no. La piscina tenía exceso de cloro, Hildebrando se ha intoxicado y ha muerto! Las vacaciones se han terminado")
-                regresoMurio = "murió"
+                regresoMurio = "Murió"
                 vacation = false                
                 
             //Si decide no entrar a la piscina
@@ -174,19 +172,20 @@ while (contadorDias < 4 && vacation === true){
             break
         
         //Si escoge vestir de verde
-        case "2":                
-
+        case "2":               
             contadorDias++
             let caminata = confirm("Has escogido el color verde! Eso significa que Hildebrando ira a una caminata guiada, aunque es un poco larga. Debería Hildebrando ir hasta el final de la caminata? Presiona 'ok' para que vaya hasta el final, o 'cancel' para que se devuelva")
 
             //Si decide ir hasta el final
             if (caminata) {
-                alert("Hildebrando ha ido hasta el final de la caminata, y se ha encontrado con una maravillosa cascada! Se toma muchas fotos y vuelve feliz al hotel")
+                let botAgua = 7000
+                restante = restante - botAgua
+                alert(`Hildebrando ha ido hasta el final de la caminata, y se ha encontrado con una maravillosa cascada! Se toma muchas fotos y vuelve feliz al hotel. Claro, le tocó comprar una botella de agua porque se estaba deshidratando del calor. Así que su nuevo disponible es de $${restante}`)
 
             //Si decide devolverse    
             } else {
                 alert("Hildebrando se ha cansado y se ha devuelto a mitad de camino. El problema es que no conocía la ruta y se ha perdido en la noche... no sabemos nada más de él, así que las vacaciones han terminado")
-                regresoMurio = "no sabemos"
+                regresoMurio = "No sabemos"
                 vacation = false
             }
             break
@@ -198,7 +197,7 @@ while (contadorDias < 4 && vacation === true){
             
             contadorDias++
             while(flag){
-                let playa = prompt("Has escogido el color rojo! Eso significa que Hildebrando irá a la playa y allí hay varias actividades para hacer. Ayuda a Hildebrando a escoger:\n1. Jugar voleibol\n2.Nadar en el mar\n3.Tomar cocteles y descansar")
+                let playa = prompt("Has escogido el color rojo! Eso significa que Hildebrando irá a la playa y allí hay varias actividades para hacer. Ayuda a Hildebrando a escoger:\n1. Jugar voleibol\n2. Nadar en el mar\n3. Tomar cocteles y descansar")
 
                 switch(playa){
 
@@ -218,7 +217,7 @@ while (contadorDias < 4 && vacation === true){
                     //Decide tomar cocteles    
                     case "3":
                         restante = restante - 70000
-                        alert(`Has escogido tomar cocteles y descansar. El coctel estaba un poco costoso, valía $70.000, así que el nuevo dinero disponible es de ${restante}... Oh no! Al parecer el coctel estaba hecho con chirrinchi adulterado, Hildebrando se siente muy mal y debe correr al hospital, las vacaciones han finalizado`)
+                        alert(`Has escogido tomar cocteles y descansar. El coctel estaba un poco costoso, valía $70.000, así que el nuevo dinero disponible es de $${restante} y... Oh no! Al parecer el coctel estaba hecho con chirrinchi adulterado, Hildebrando se siente muy mal y debe correr al hospital, las vacaciones han finalizado`)
                         flag = false 
                         vacation = false
                         break
@@ -246,7 +245,9 @@ while (contadorDias < 4 && vacation === true){
 
                     //Si escoge bailar
                     case "2":
-                        alert("Has escogido ir a bailar! Hildebrando encuentra una excelente bailarina y se la pasa de maravilla")
+                        let bebida = 6000
+                        restante = restante - (bebida*2)
+                        alert(`Has escogido ir a bailar! Hildebrando encuentra una excelente bailarina y se la pasa de maravilla. Como terminan cansados, Hildebrando invita a algo para tomar. Así que su nuevo disponible es de $${restante}`)
                         flag = false
                         break
 
